@@ -35,8 +35,11 @@
             this.txtCreditos = new System.Windows.Forms.TextBox();
             this.txtAsignatura = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.cmbCarrera = new System.Windows.Forms.ComboBox();
+            this.gridAsignaturas = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAsignaturas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 22);
+            this.label2.Location = new System.Drawing.Point(80, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 1;
@@ -60,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 22);
+            this.label3.Location = new System.Drawing.Point(234, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 2;
@@ -69,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(293, 22);
+            this.label4.Location = new System.Drawing.Point(282, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 3;
@@ -77,7 +80,7 @@
             // 
             // txtCreditos
             // 
-            this.txtCreditos.Location = new System.Drawing.Point(245, 38);
+            this.txtCreditos.Location = new System.Drawing.Point(237, 38);
             this.txtCreditos.MaxLength = 2;
             this.txtCreditos.Name = "txtCreditos";
             this.txtCreditos.Size = new System.Drawing.Size(42, 20);
@@ -85,7 +88,7 @@
             // 
             // txtAsignatura
             // 
-            this.txtAsignatura.Location = new System.Drawing.Point(85, 38);
+            this.txtAsignatura.Location = new System.Drawing.Point(80, 38);
             this.txtAsignatura.MaxLength = 30;
             this.txtAsignatura.Name = "txtAsignatura";
             this.txtAsignatura.Size = new System.Drawing.Size(151, 20);
@@ -99,14 +102,14 @@
             this.txtCodigo.Size = new System.Drawing.Size(62, 20);
             this.txtCodigo.TabIndex = 6;
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(423, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(423, 36);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // cmbCarrera
             // 
@@ -117,18 +120,37 @@
             "Contabilidad y Auditoría",
             "Negocios Internacionales",
             "Enfermería"});
-            this.cmbCarrera.Location = new System.Drawing.Point(296, 38);
+            this.cmbCarrera.Location = new System.Drawing.Point(285, 38);
             this.cmbCarrera.Name = "cmbCarrera";
-            this.cmbCarrera.Size = new System.Drawing.Size(121, 21);
+            this.cmbCarrera.Size = new System.Drawing.Size(132, 21);
             this.cmbCarrera.TabIndex = 8;
+            // 
+            // gridAsignaturas
+            // 
+            this.gridAsignaturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAsignaturas.Location = new System.Drawing.Point(12, 95);
+            this.gridAsignaturas.Name = "gridAsignaturas";
+            this.gridAsignaturas.Size = new System.Drawing.Size(486, 175);
+            this.gridAsignaturas.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Listado de Asignaturas";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 122);
+            this.ClientSize = new System.Drawing.Size(515, 282);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.gridAsignaturas);
             this.Controls.Add(this.cmbCarrera);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtAsignatura);
             this.Controls.Add(this.txtCreditos);
@@ -138,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Listas Genericas";
+            ((System.ComponentModel.ISupportInitialize)(this.gridAsignaturas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,8 +175,10 @@
         private System.Windows.Forms.TextBox txtCreditos;
         private System.Windows.Forms.TextBox txtAsignatura;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ComboBox cmbCarrera;
+        private System.Windows.Forms.DataGridView gridAsignaturas;
+        private System.Windows.Forms.Label label5;
     }
 }
 
