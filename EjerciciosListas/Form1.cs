@@ -36,11 +36,31 @@ namespace EjerciciosListas
                 MessageBox.Show("Creditos no validos");
                 this.txtCreditos.Focus();
             }
+
             Asignatura materia = new Asignatura();
             materia.codigo = this.txtCodigo.Text;
             materia.asignatura = this.txtCodigo.Text;
             materia.creditos = creditos;
             materia.carrera = this.cmbCarrera.Text;
+
+            lista.Add(materia);
+
+            this.gridAsignaturas.DataSource = null;
+            this.gridAsignaturas.DataSource = lista;
+
+            this.txtAsignatura.Text = "";
+            this.txtCreditos.Text = "";
+            this.txtCodigo.Text = "";
+            this.cmbCarrera.Text = "";
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            this.gridAsignaturas.DataSource = null;
+            this.gridAsignaturas.DataSource = lista.Where( data => data.carrera == this.txtCarrera.Text).ToList();
+
+            this.txtCredMax.Text = lista.Max(data => data.creditos).ToString();
+            this.txtCredMin.Text = lista.Min(data => data.creditos).ToString();
         }
     }
 }

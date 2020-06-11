@@ -39,6 +39,13 @@
             this.cmbCarrera = new System.Windows.Forms.ComboBox();
             this.gridAsignaturas = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCarrera = new System.Windows.Forms.TextBox();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtCredMax = new System.Windows.Forms.TextBox();
+            this.txtCredMin = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridAsignaturas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +111,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(423, 36);
+            this.btnAgregar.Location = new System.Drawing.Point(387, 66);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 7;
@@ -123,7 +130,7 @@
             "Enfermería"});
             this.cmbCarrera.Location = new System.Drawing.Point(285, 38);
             this.cmbCarrera.Name = "cmbCarrera";
-            this.cmbCarrera.Size = new System.Drawing.Size(132, 21);
+            this.cmbCarrera.Size = new System.Drawing.Size(177, 21);
             this.cmbCarrera.TabIndex = 8;
             // 
             // gridAsignaturas
@@ -131,7 +138,7 @@
             this.gridAsignaturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAsignaturas.Location = new System.Drawing.Point(12, 95);
             this.gridAsignaturas.Name = "gridAsignaturas";
-            this.gridAsignaturas.Size = new System.Drawing.Size(486, 175);
+            this.gridAsignaturas.Size = new System.Drawing.Size(450, 175);
             this.gridAsignaturas.TabIndex = 9;
             // 
             // label5
@@ -143,11 +150,77 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Listado de Asignaturas";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 282);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Filtrar por Carrera";
+            // 
+            // txtCarrera
+            // 
+            this.txtCarrera.Location = new System.Drawing.Point(105, 279);
+            this.txtCarrera.MaxLength = 30;
+            this.txtCarrera.Name = "txtCarrera";
+            this.txtCarrera.Size = new System.Drawing.Size(276, 20);
+            this.txtCarrera.TabIndex = 12;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(387, 276);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 13;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 314);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(146, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Maxima cantidad de Creditos ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(254, 314);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(143, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Minima cantidad de Creditos ";
+            // 
+            // txtCredMax
+            // 
+            this.txtCredMax.Location = new System.Drawing.Point(164, 311);
+            this.txtCredMax.Name = "txtCredMax";
+            this.txtCredMax.Size = new System.Drawing.Size(57, 20);
+            this.txtCredMax.TabIndex = 16;
+            // 
+            // txtCredMin
+            // 
+            this.txtCredMin.Location = new System.Drawing.Point(403, 311);
+            this.txtCredMin.Name = "txtCredMin";
+            this.txtCredMin.Size = new System.Drawing.Size(59, 20);
+            this.txtCredMin.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 282);
+            this.ClientSize = new System.Drawing.Size(474, 341);
+            this.Controls.Add(this.txtCredMin);
+            this.Controls.Add(this.txtCredMax);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.txtCarrera);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.gridAsignaturas);
             this.Controls.Add(this.cmbCarrera);
@@ -180,6 +253,13 @@
         private System.Windows.Forms.ComboBox cmbCarrera;
         private System.Windows.Forms.DataGridView gridAsignaturas;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCarrera;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCredMax;
+        private System.Windows.Forms.TextBox txtCredMin;
     }
 }
 
